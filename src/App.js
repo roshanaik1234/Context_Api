@@ -1,24 +1,26 @@
-import logo from './logo.svg';
+import ReduceCount from './ReduceCount';
+import AddedCount from './AddedCount';
 import './App.css';
+import { NowCont, NowContProvider } from './CountContext';
+import { useContext } from 'react';
+
+function AppContent() {
+  const { count } = useContext(NowCont); 
+
+  return (
+    <>
+      <h2>Now Count : {count}</h2>
+      <AddedCount />
+      <ReduceCount />
+    </>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <NowContProvider>
+      <AppContent />
+    </NowContProvider>
   );
 }
 
