@@ -6,7 +6,7 @@ const ReduceCount = () => {
       const { count, setCount } = useContext(NowCont); 
   return (
     <>
-      <button onClick={() => setCount(count - 1)}>-1</button>
+      <button  className='reducedButton' onClick={() => setCount(count - 1)}>-1</button>
     </>
   )
 }

@@ -9,9 +9,11 @@ function AppContent() {
 
   return (
     <>
-      <h2>Now Count : {count}</h2>
+    <div className='container'>
+     <h2>Now Count : {count}</h2>
       <AddedCount />
       <ReduceCount />
+    </div>      
     </>
   );
 }

@@ -36,3 +36,24 @@
     transform: rotate(360deg);
   }
 }
+
+button{
+  border: 1px solid transparent;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.addedButton{
+ padding: 7px 81px;
+ background-color: green;
+}
+
+.reducedButton{
+  padding: 7px 81px;
+  background-color: red;
+}
+
+.container{
+      display: grid;
+    justify-content: center;
+}
